@@ -1,0 +1,76 @@
+{% include 'admin_header.html' %}
+
+<div id="page">
+  <div id="content">
+    <div class="post">
+      <center>
+        <h2 class="title"><a href="#">Search Employee</a></h2>
+        <hr class="black"><br><br><br>
+
+        
+        <form action="/searchprocess" method="post">
+          Enter Name :
+          <input type="text" name="txtname" placeholder="Enter name here">
+          <br><br>
+          <input type="submit" value="Search" class="btn btn-success">
+        </form>
+        <br><br>
+
+        
+        {% if emplist %}
+        <table border="1" class="table table-bordered" style="width:80%;">
+          <thead>
+            <tr>
+              <th>Emp ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Mobile</th>
+              <th>Designation</th>
+              <th>Salary</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for emp in emplist %}
+            <tr>
+              <td>{{ emp[0] }}</td>
+              <td>{{ emp[1] }}</td>
+              <td>{{ emp[2] }}</td>
+              <td>{{ emp[3] }}</td>
+              <td>{{ emp[4] }}</td>
+              <td>{{ emp[5] }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        {% else %}
+        <p>No results found.</p>
+        {% endif %}
+      </center>
+    </div>
+  </div>
+
+  
+  <div id="sidebar">
+    <ul>
+      <li>
+        <h2>DASHBOARD</h2>
+        <img src="/static/images/profile1.jpg" width="150px">
+      </li>
+      <li>
+        <ul>
+          <h4>Security Reminder :</h4>  
+             Please do not share your login credentials. Change your password every 90 days.
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<div id="footer">
+  <p>&copy; Untitled. All rights reserved. Design by Amol Desai</p>
+</div>
+</body>
+</html>
+
+

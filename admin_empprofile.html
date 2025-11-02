@@ -1,0 +1,58 @@
+{% include "admin_header.html"%}
+
+<div id="page">
+  <div id="content">
+    <div class="post">
+      <hr><br>
+      <h2 class="title"><a href="#">Edit Employee</a></h2>
+
+      <div>
+        {% for n in emplist %}
+        <form action="/empupdate" method="POST">
+          Emp ID : 
+          <input type="text" value="{{n[0]}}" name="txtEmpId" class="form-control" readonly><br>
+          
+          Name : 
+          <input type="text" value="{{n[1]}}" name="txtName" class="form-control"><br>
+          
+          Email ID : 
+          <input type="text" value="{{n[2]}}" name="txtEmail" class="form-control"><br>
+          
+          Mobile No : 
+          <input type="text" value="{{n[3]}}" name="txtMobile" class="form-control"><br>
+          
+          Designation : 
+          <input type="text" value="{{n[4]}}" name="txtDesignation" class="form-control"><br>
+          
+          Salary : 
+          <input type="text" value="{{n[5]}}" name="txtSalary" class="form-control"><br>
+          
+          <input type="submit" value="Save Changes" class="btn btn-success">
+        </form>
+        {% endfor %}
+      </div>
+
+      <br><br>
+
+      <form action="/empdelete" method="POST">
+        <input type="hidden" name="txtEmpId" value="{{emplist[0][0]}}">
+        <input type="submit" value="Delete" class="btn btn-danger">
+      </form>
+    </div>
+  </div>
+
+  <div id="sidebar">
+    <ul>
+      <li>
+        <h2>DASHBOARD</h2>
+        <img src="/static/images/profile1.jpg" width="150px">
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div id="footer">
+  <p>&copy; Untitled. All rights reserved. Design by Amol Desai</p>
+</div>
+</body>
+</html>

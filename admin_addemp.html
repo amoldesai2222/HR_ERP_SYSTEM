@@ -1,0 +1,46 @@
+{% include "admin_header.html"%}
+
+<div id="page">
+    <div id="content">
+      <div class="post">
+        <hr><br>
+        
+        <h2 class="title"><a href="#">Add Employee</a></h2>
+        <div>
+          <form action="/save" method="POST">
+          Emp ID : <input type="text" name="txtEmpId" class="form-control"><br>
+          Name : <input type="text" name="txtName" class="form-control"><br>
+          Email ID : <input type="text" name="txtEmail" class="form-control"><br>
+          Mobile No : <input type="text" name="txtMobile" class="form-control"><br>
+          Designation : <input type="text" name="txtDesignatin" class="form-control"><br>
+          Salary : <input type="text" name="txtSalary" class="form-control"><br>
+          <input type="submit" value="Submit" class="btn btn-success">
+         </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="sidebar">
+      <ul>
+        <li>
+          <h2>DASHBOARD</h2>
+          <img src="/static/images/profile1.jpg" width="150px">
+        </li>
+        <li>
+          
+          <ul>
+            <h4>Security Reminder :</h4>  
+             Please do not share your login credentials. Change your password every 90 days.
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="footer">
+  <p>&copy; Untitled. All rights reserved. Design by Amol Desai
+  </p>
+</div>
+</body>
+</html>

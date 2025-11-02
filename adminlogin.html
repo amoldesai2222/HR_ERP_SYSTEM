@@ -1,0 +1,55 @@
+{% include"header.html" %}
+
+ <div id="page">
+    <div id="content">
+      <div class="post">
+        
+        
+    <center>
+      <h1>Admin Login</h1><br><br><br><br><hr>
+  
+      <form action="/dashboard" method="POST">
+    <input type="text" name="txtusername" placeholder="Enter Username" required>
+    <br><br>
+    <input type="password" name="txtpassword" placeholder="Enter Password" required>
+    <br><br>
+    <font color="red">{{message}}</font><br><br>
+    <input type="submit" value="Login" class="btn btn-success">
+</form>
+
+        
+    </center>
+
+
+        
+
+        <div>
+        </div>
+      </div>
+    </div>
+
+    <div id="sidebar">
+      <ul>
+        <li>
+          <h2>NOTICE</h2>
+        </li>
+        <li>
+<h5>🗓️ HR & Company Updates </h5> <br>
+<h6>Upcoming Holiday: <br> </h6> Office will be closed on [Date] for [Holiday Name]. <br>
+
+<h6>  Policy Update: <br> </h6>  New leave policy effective from [Date]. Check the HR documents section. <br>
+
+ <h6>Payroll Reminder: <br></h6> Salary will be processed on [Date]. Submit timesheets by [Deadline]. 
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="footer">
+  <p>&copy; Untitled. All rights reserved. Design by Amol Desai
+  </p>
+</div>
+</body>
+</html>
